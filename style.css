@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1b0033, #000010, #000);
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.cinema {
+  width: 90%;
+  max-width: 900px;
+  padding: 35px;
+  border-radius: 25px;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 0, 60, 0.9),
+    rgba(0, 0, 20, 0.95)
+  );
+  border: 3px solid rgba(160, 90, 255, 0.6);
+  box-shadow: 0 0 25px rgba(160, 90, 255, 0.6) 0 0 60px rgba(80, 200, 255, 0.3);
+  text-align: center;
+  position: relative;
+}
+h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+  color: #caa6ff;
+  text-shadow: 0 0 10px #9f6bff 0 0 20px #6a00ff 0 0 40px #00eaff;
+  animation: glow 2.5s infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #6a00ff, 0 0 25px #00eaff;
+  }
+  to {
+    text-shadow: 0 0 20px #caa6ff, 0 0 50px #6a00ff;
+  }
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.star {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #9f6bff;
+  animation: twinkle 1.2s infinite alternate;
+}
+.star:nth-child(even) {
+  animation-delay: 0.6s;
+}
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+video {
+  width: 100%;
+  margin: 25px 0;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 234, 255, 0.6);
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.6), inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+.buttons {
+  margin-top: 25px;
+}
+button {
+  background: linear-gradient(135deg, #6a00ff, #00eaff);
+  color: #000;
+  border: none;
+  padding: 14px 26px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.8);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 35px rgba(160, 90, 255, 1);
+}
+.sub-tit {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #bfa7ff;
+  opacity: 0.8;
+}
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #bfa7ff;
+  opacity: 0.8;
+}
